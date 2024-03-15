@@ -12,5 +12,5 @@ node_min_capacity     = 1
 instance_type         = "t2.large"
 key_name              = "ec2_apache"
 region                = "us-east-1"
-ecr_repo_name = "my-ecr"
-iam_user_arn = "arn:aws:iam::941391622677:user/eks-admin"
+ecr_repo_name         = "my-ecr"
+iam_user_arn          = "arn:aws:iam::941391622677:user/eks-admin"

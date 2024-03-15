@@ -55,6 +55,6 @@ resource "aws_eks_access_policy_association" "access_policy" {
   principal_arn = var.iam_user_arn
 
   access_scope {
-    type       = "cluster"
+    type = "cluster"
   }
 }

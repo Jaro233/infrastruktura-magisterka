@@ -1,6 +1,6 @@
 module "ecr" {
-  source  = "terraform-aws-modules/ecr/aws"
-  version = "~> 1.6.0"
+  source          = "terraform-aws-modules/ecr/aws"
+  version         = "~> 1.6.0"
   repository_name = var.ecr_repo_name
   repository_lifecycle_policy = jsonencode({
     rules = [
@@ -8,9 +8,9 @@ module "ecr" {
         rulePriority = 1
         description  = "Expire untagged images older than 30 days"
         selection = {
-          tagStatus = "untagged"
-          countType = "sinceImagePushed"
-          countUnit  = "days"
+          tagStatus   = "untagged"
+          countType   = "sinceImagePushed"
+          countUnit   = "days"
           countNumber = 30
         }
         action = {
